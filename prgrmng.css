@@ -1,0 +1,112 @@
+.prgrmng1{
+	background-color: black;
+}
+
+.prgrmng2{
+	width: 90%;
+	margin: auto;
+	background-color: dodgerblue;
+	//height: 1000px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px 0;
+}
+/*Global*/
+.prgrmng2 .common{
+	width: 47%;
+	margin: 10px;
+	height: 400px;
+	//background-color: white;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	overflow: auto;
+	background: url("image14.jpg") no-repeat;
+	text-align: center;
+}
+/*Global*/
+.common > h3{
+	text-decoration: underline;
+	text-align: center;
+}
+/*Global*/
+.common > button{
+	background-color: green;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	color: white;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+.common > button:hover{
+	background-color: orange;
+	color: black;
+	border-radius: 20px;
+	transition: 0.2s;
+	transform: scale(1.1);
+}
+
+.common input{
+	margin: 15px 10px;
+	padding: 10px 15px;
+	border-radius: 16px;
+	width: 150px;
+	height: 40px;
+	transition: 0.2s;
+	border-top: 5px solid blue;
+	border-left: 5px solid blue;
+	box-sizing: border-box;
+}
+
+.common input:hover{
+	background-color: rgb(200, 200, 200);
+	border: none;
+	box-shadow: 2px 2px 5px 5px;
+	box-sizing: border-box;
+}
+
+.between_prime{
+
+}
+
+@media only screen and (max-width: 770px){
+
+		.prgrmng2{
+		}
+
+		.prgrmng2 .common{
+			width: 95%;
+			text-align: center;
+		}
+		
+		.prgrmng1{
+			font-size: 0.8rem;
+		}
+		
+		/*Global*/
+		.common > h3{
+		}
+		/*Global*/
+		.common > button{
+			font-size: 0.7rem;
+			padding: 5px 10px;
+			width: 70%;
+			height: 35px;
+		}
+
+		.common input{
+			margin-bottom: 10px;
+			margin-top: 0px;
+			padding: 8px 10px;
+			border-radius: 12px;
+			width: 70%;
+			height: 35px;
+			border-top: 3px solid blue;
+			border-left: 3px solid blue;
+		}		
+		
+		.between_prime{		
+		}
+}

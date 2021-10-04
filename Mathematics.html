@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: arial;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styleheader.css">
+	<link rel="stylesheet" type="text/css" href="bckgrnd.css">
+	<link rel="stylesheet" type="text/css" href="prgrmng.css">
+</head>
+<body>
+<header class="style_header">
+	<div class="container">
+		<div class="contained1">
+			<h2>MD ABDULLAH NADIR</h2>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div id="showcase">
+	<div class="bckgrnd_cntnr container">
+		<h1>Mathematical Programming</h1>
+		<p>Here, you would get a number of mathematical operations and functions through programming in JavaScript and DOM.</p>
+	</div>
+</div>
+
+<div id="dedundum">
+	<div class="container">
+
+	</div>
+</div>
+
+<div class="prgrmng1">
+	<div class="prgrmng2">
+
+		<div class="array_order common">
+			<h3>Sorting of Array with the help of JavaScript and DOM using 'for' Loop</h3><br>
+			<p id="render1"></p><br>
+			<button onclick="functtt()">Ascending Order</button><br><br>
+			<p id="renderttt"></p><br>
+			<button onclick="func1()">Descending Order</button><br><br>
+			<p id="render2"></p>
+			</body>
+			<script>
+				if(true){
+					let x = [12, 15, 1, 45, 4, 3];
+					function functtt(){
+						
+						for(var i = 1; i<x.length; i++){
+						  for(var j=0; j<i; j++){
+						    if(x[j]>x[i]){
+						      var a = x[i];
+						      x[i] = x[j];
+						      x[j] = a;
+						    }
+						  }
+						}
+						
+						document.getElementById("renderttt").innerHTML = `The sorted array in Ascending Order is <h4>${x}</h4>`;
+					}
+					document.getElementById("render1").innerHTML = `The original array is <h4>${x}</h4>`;
+				}
+
+				if(true){
+					let x = [12, 15, 1, 45, 4, 3];
+					function func1(){
+						
+						for(var i = 1; i<x.length; i++){
+						  for(var j=0; j<i; j++){
+						    if(x[j]<x[i]){
+						      var a = x[i];
+						      x[i] = x[j];
+						      x[j] = a;
+						    }
+						  }
+						}
+						
+						document.getElementById("render2").innerHTML = `The sorted array in Desscending Order is <h4>${x}</h4>`;
+					}
+					//document.getElementById("render1").innerHTML = `The original array is <h5>${x}</h5>`;
+				}
+			</script>
+		</div>
+		
+		<div class="prime_number common">
+			<h3>Check whether a given Number is Prime or Divisible</h3><br>
+			<input id="inpt"><br>
+			<button onclick="main()">check prime number</button>
+			<div id="val"></div>
+			</body>
+			<script>
+				if(true){
+				let z = document.getElementById("inpt");
+				var y;
+				function main(){
+				    if(parseFloat(z.value)==1){
+				      y = " neither a prime nor a divisible number";
+				    }
+				    else if(parseFloat(z.value)==2){
+				      y = " A Prime Number";
+				    }
+				    else if(parseFloat(z.value)>2){
+				      for(var i=2;i<z.value;i++){
+				        if(parseFloat(z.value)%i==0){
+				          y = " Divisible Number";
+				          break;
+				        }
+				    	else{
+				       		y = " A Prime Number";
+				        }
+				      }
+				    }
+				  document.getElementById("val").innerHTML=y;
+				}
+			}
+			</script>
+		</div>
+		
+		<div class="between_prime common">
+			<h3>Getting Prime Numbers between Two given Numbers.</h3><br>
+			<label><input id="frstinp" type="number" placeholder="Enter Number > 0"></label>
+			<label><input id="scndinp" type="number" placeholder="EnternNumber < 2000"></label><br>
+			<button onclick="getPrime()">Click Here</button><br><br>
+			<p id="frstrndr"></p>
+			<p id="scndrndr"></p>
+			<script>
+				if (true) {
+					function getPrime(){
+						let a = Number(document.getElementById("frstinp").value);
+						let b = Number(document.getElementById("scndinp").value);
+						let x = [];
+						if (a>=0&&b<=2000) {
+							for (let i=a; i<=b; i++) {
+							let qqq = 0;
+								for(var zzz=1;zzz<=i;zzz++){
+									if(i%zzz==0){
+										qqq++;
+									}
+								}
+								if(qqq===2){
+									x.push(i);
+								}
+							}
+						}
+						document.getElementById("frstrndr").innerHTML = `There are <b>${x.length}</b> Prime Numbers between <b>${a}</b> and <b>${b}</b> and these Prime Numbers are as below:<br><br>`;
+						document.getElementById("frstrndr").innerHTML += x.join(", ");
+					}
+				}
+			</script>
+			
+		</div>
+		
+		<div class="factorial common">
+			<h3>Finding "Factorial" of a positive number.</h3><br>
+			<input id="ref" placeholder="enter num"><br><br>
+			<button onclick="func()">
+			  Get Factorial
+			</button><br>
+			<b><div id="renderxx"></div></b>
+			<script>
+				if(true){
+					function func(){
+					  let y = 1;
+					  let a = document.getElementById("ref").value;
+					  	if( a < 0 ){
+					  	  y = "can't find factorial of -ve numbers";
+					  	}
+					  	/*else if( a==0 && a==1){
+					  	  y = 1;
+					  	}*/
+					  	else{
+					  	  for(let i = 2; i<=a; i++){
+					  	    y = y*i;
+					  	  }
+					  	}
+					  document.getElementById("renderxx").innerHTML = "Factorial: " + y;
+					}
+				}
+			</script>
+			
+		</div>
+		
+		<div class="invoice common">
+			
+		</div>
+		
+		<div class="invoice common">
+			
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>Nadir Web Design, Copyright 2021</p>
+</footer>
+
+</body>
+</html>
